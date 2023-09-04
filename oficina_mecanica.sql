@@ -267,7 +267,7 @@ INSERT INTO revision(idRevisionVehicle, reviewDescription, revisionDate)
              (2, 'Verificar a situação do motor após o reparo', '2023-10-05'),			              
              (3, 'Verificar se o motor continua em bom estado após reparo', '2023-03-05'),
              (9, 'Verificar se a parte elétrica está funcionando perfeitamente', '2022-03-17');
-
+			              
 INSERT INTO supplier(socialName, CNPJ, contact)
        VALUES('Mecânica Prime', 47777774101474, 118889997415),
              ('Mecânica Rss', 47777774101475, 118889997417),
@@ -279,12 +279,23 @@ INSERT INTO supplier(socialName, CNPJ, contact)
              ('Mecânica Tem de tudo', 47777774101473, 118889997413),
              ('Mecânica Eletro ', 47777774101484, 118889997410),
              ('Mecânica Quality SA', 47777774101494, 118889997915);
-
+  
 INSERT INTO employees(fullName,  email, CPF,  dateOfBirth, address, neighborhood, city, state, contact, profession, hiringDate, salary)             
-  VALUES('Rafael Santos', 'rafa@gmail.com', '1988-08-28','Rua Fernando Peixoto', 'Horizonte', 'Itabuna','BA', '224545454545' 'Mecânico,', '2020-02-24',2500),
-        ('Raimundo Salles', 'raimundo@gmail.com', '2000-04-05','Rua do Ipê', 'Horizonte', 'Itabuna','BA', '224545454544' 'Mecânico,', '2020-02-24',2500),
-        ('Pedro Novais', 'pedro@gmail.com', '1990-08-28','Rua Fernando Peixoto', 'Horizonte', 'Itabuna','BA', '224545454543' 'Mecânico,', '2020-02-24',2500),
-        ('Paulo Santos', 'rafa@gmail.com', '1995-08-28','Rua Fernando Peixoto', 'Horizonte', 'Itabuna','BA', '224545454542' 'Mecânico,', '2020-02-24',2500);			              
+  VALUES('Rafael Santos', 'rafa@gmail.com', 97979797979, '1988-08-28','Rua Fernando Peixoto', 'Horizonte', 'Itabuna','BA', 224545454545 ,'Mecânico,', '2020-02-24',2500),
+        ('Raimundo Salles', 'raimundo@gmail.com', 48484848484,'2000-04-05','Rua do Ipê', 'Horizonte', 'Itabuna','BA', 224545454544 ,'Mecânico,', '2020-02-24',2500),
+        ('Pedro Novais', 'pedro@gmail.com', 54545454545, '1990-08-28','Rua Fernando Peixoto', 'Horizonte', 'Itabuna','BA', 224545454543 ,'Mecânico,', '2020-02-24',2500),
+        ('Paulo Santos', 'rafa@gmail.com', 74747454546,'1995-08-28','Rua Fernando Peixoto', 'Horizonte', 'Itabuna','BA', 224545454542 ,'Mecânico,', '2020-02-24',2500);
+
+INSERT INTO bills(amount, dueDate, billNumber)
+       VALUES(500, '2022-02-09', 1516151515),
+             (2000, '2022-02-15', 1516151514),
+             (1800, '2022-02-12', 1516151517),
+             (800, '2022-02-11', 1516151518);
+             
+INSERT INTO creditcard(creditCardNumber, amount, installments, installmentAmount)
+       VALUES(5555588888545453, 3000, 12, 294.55),
+             (5555588888545453, 3000, 2, 1500),
+             (5555588888545453, 3000, 1, 3000);        
   
 SELECT * FROM clients; 
       
@@ -295,7 +306,18 @@ SELECT * FROM client_pf;
 SELECT * FROM vehicles;
 
 SELECT * FROM budget;
- 
+
+SELECT * FROM revision;
+
+SELECT * FROM supplier;
+
+SELECT * FROM employees;
+
+SELECT * FROM bills;
+
+SELECT * FROM creditcard;
+
+
 -- Buscar todos os campos da tabela cliente e incluir somente os que tem CNPJ
 SELECT
 	c.idClient,
