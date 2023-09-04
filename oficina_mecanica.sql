@@ -256,13 +256,35 @@ INSERT INTO budget(IdBudgetClient, serviceDescription,  budgetDate, completionTi
 			  (3, 'Avaria no Motor', '2023-02-03', '2023-02-04', 3000),            
 			  (4, 'Avaria no Motor', '2023-05-03', '2023-05-04', 5000),            
 			  (5, 'Avaria no Motor', '2023-05-20', '2023-05-21', 50000),            
-			  (6, 'Pequena problema na parte elétrica', '2022-02-09', '2022-02-10', 500),            
-			  (7, 'Pequena problema na parte elétrica', '2022-02-11', '2022-02-12', 800),
-			  (8, 'Pequena problema na parte elétrica', '2022-02-12', '2022-02-14', 1800),
-			  (9, 'Pequena problema na parte elétrica', '2022-02-15', '2022-02-17', 2000),
+			  (6, 'Pequeno problema na parte elétrica', '2022-02-09', '2022-02-10', 500),            
+			  (7, 'Pequeno problema na parte elétrica', '2022-02-11', '2022-02-12', 800),
+			  (8, 'Pequeno problema na parte elétrica', '2022-02-12', '2022-02-14', 1800),
+			  (9, 'Pequeno problema na parte elétrica', '2022-02-15', '2022-02-17', 2000),
               (10, 'Avaria no Motor', '2022-02-20', '2022-02-22', 150000);
 			             
-			              
+INSERT INTO revision(idRevisionVehicle, reviewDescription, revisionDate)
+       VALUES(1, 'Verificar o funciomamento do motor que foi feito o reparo', '2023-10-04'),			              
+             (2, 'Verificar a situação do motor após o reparo', '2023-10-05'),			              
+             (3, 'Verificar se o motor continua em bom estado após reparo', '2023-03-05'),
+             (9, 'Verificar se a parte elétrica está funcionando perfeitamente', '2022-03-17');
+
+INSERT INTO supplier(socialName, CNPJ, contact)
+       VALUES('Mecânica Prime', 47777774101474, 118889997415),
+             ('Mecânica Rss', 47777774101475, 118889997417),
+             ('Peças SA', 47777774101477, 118889997414),
+             ('Mecânica Expert', 47777774101478, 118889997413),
+             ('Mecânica Julio', 47777774101479, 118889997412),
+             ('Mecânica Valmar', 47777774101471, 118889997411),
+             ('Mecânica Bolivar', 47777774101472, 118889997416),
+             ('Mecânica Tem de tudo', 47777774101473, 118889997413),
+             ('Mecânica Eletro ', 47777774101484, 118889997410),
+             ('Mecânica Quality SA', 47777774101494, 118889997915);
+
+INSERT INTO employees(fullName,  email, CPF,  dateOfBirth, address, neighborhood, city, state, contact, profession, hiringDate, salary)             
+  VALUES('Rafael Santos', 'rafa@gmail.com', '1988-08-28','Rua Fernando Peixoto', 'Horizonte', 'Itabuna','BA', '224545454545' 'Mecânico,', '2020-02-24',2500),
+        ('Raimundo Salles', 'raimundo@gmail.com', '2000-04-05','Rua do Ipê', 'Horizonte', 'Itabuna','BA', '224545454544' 'Mecânico,', '2020-02-24',2500),
+        ('Pedro Novais', 'pedro@gmail.com', '1990-08-28','Rua Fernando Peixoto', 'Horizonte', 'Itabuna','BA', '224545454543' 'Mecânico,', '2020-02-24',2500),
+        ('Paulo Santos', 'rafa@gmail.com', '1995-08-28','Rua Fernando Peixoto', 'Horizonte', 'Itabuna','BA', '224545454542' 'Mecânico,', '2020-02-24',2500);			              
   
 SELECT * FROM clients; 
       
